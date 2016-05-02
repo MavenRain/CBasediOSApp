@@ -10,10 +10,8 @@
 		23728E8F154622C600ED5A71 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23728E8E154622C600ED5A71 /* UIKit.framework */; };
 		23728E91154622C600ED5A71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23728E90154622C600ED5A71 /* Foundation.framework */; };
 		23728E93154622C600ED5A71 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23728E92154622C600ED5A71 /* CoreGraphics.framework */; };
-		23728E9B154622C600ED5A71 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 23728E9A154622C600ED5A71 /* main.c */; };
-		23728E9F154622C600ED5A71 /* AppDelegate.c in Sources */ = {isa = PBXBuildFile; fileRef = 23728E9E154622C600ED5A71 /* AppDelegate.c */; };
-		23728EA71546269400ED5A71 /* View.c in Sources */ = {isa = PBXBuildFile; fileRef = 23728EA61546269400ED5A71 /* View.c */; };
 		8DBADA401CD5292600BDA443 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DBADA3F1CD5292600BDA443 /* Default-568h@2x.png */; };
+		DA9D839A1CD6F22D005A1509 /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DA9D83991CD6F22D005A1509 /* Main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +20,8 @@
 		23728E90154622C600ED5A71 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23728E92154622C600ED5A71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		23728E96154622C600ED5A71 /* CBasediOSApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CBasediOSApp-Info.plist"; sourceTree = "<group>"; };
-		23728E9A154622C600ED5A71 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		23728E9E154622C600ED5A71 /* AppDelegate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppDelegate.c; sourceTree = "<group>"; };
-		23728EA61546269400ED5A71 /* View.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = View.c; sourceTree = "<group>"; };
 		8DBADA3F1CD5292600BDA443 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DA9D83991CD6F22D005A1509 /* Main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +41,7 @@
 		23728E7F154622C500ED5A71 = {
 			isa = PBXGroup;
 			children = (
+				DA9D83991CD6F22D005A1509 /* Main.cpp */,
 				8DBADA3F1CD5292600BDA443 /* Default-568h@2x.png */,
 				23728E94154622C600ED5A71 /* CBasediOSApp */,
 				23728E8D154622C600ED5A71 /* Frameworks */,
@@ -73,8 +70,6 @@
 		23728E94154622C600ED5A71 /* CBasediOSApp */ = {
 			isa = PBXGroup;
 			children = (
-				23728E9E154622C600ED5A71 /* AppDelegate.c */,
-				23728EA61546269400ED5A71 /* View.c */,
 				23728E95154622C600ED5A71 /* Supporting Files */,
 			);
 			path = CBasediOSApp;
@@ -84,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				23728E96154622C600ED5A71 /* CBasediOSApp-Info.plist */,
-				23728E9A154622C600ED5A71 /* main.c */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +111,11 @@
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ultimate Computer Services, Inc.";
+				TargetAttributes = {
+					23728E89154622C600ED5A71 = {
+						DevelopmentTeam = ZMCJ36DTYZ;
+					};
+				};
 			};
 			buildConfigurationList = 23728E84154622C500ED5A71 /* Build configuration list for PBXProject "CBasediOSApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -151,9 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23728E9B154622C600ED5A71 /* main.c in Sources */,
-				23728E9F154622C600ED5A71 /* AppDelegate.c in Sources */,
-				23728EA71546269400ED5A71 /* View.c in Sources */,
+				DA9D839A1CD6F22D005A1509 /* Main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +205,8 @@
 		23728EA3154622C600ED5A71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = "";
@@ -215,6 +214,7 @@
 				INFOPLIST_FILE = "CBasediOSApp/CBasediOSApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -222,6 +222,8 @@
 		23728EA4154622C600ED5A71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
 				GCC_VERSION = "";
@@ -229,6 +231,7 @@
 				INFOPLIST_FILE = "CBasediOSApp/CBasediOSApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
